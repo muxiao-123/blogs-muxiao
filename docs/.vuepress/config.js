@@ -1,6 +1,17 @@
+const mineBar = () => {
+  return {
+    title: 'Mine',
+    collapsable: true,
+    sidebarDepth: 1,
+    children: [
+      ['mine/', 'home'],
+      'mine/tree'
+    ]
+  }
+}
 const cssBar = function () {
   return {
-    title: 'css',
+    title: 'Css',
     collapsable: true,
     sidebarDepth: 1,
     children: [
@@ -10,7 +21,7 @@ const cssBar = function () {
 }
 const htmlBar = function () {
   return {
-    title: 'html',
+    title: 'Html',
     collapsable: true,
     children: [
       ['html/', 'Html'],
@@ -18,9 +29,18 @@ const htmlBar = function () {
     ],
   }
 }
+const typescriptBar = () => {
+  return {
+    title: 'Typescript',
+    collapsable: true,
+    children: [
+      ['typescript/', 'ts']
+    ]
+  }
+}
 const nodeBar = function () {
   return {
-    title: 'node',
+    title: 'Node',
     collapsable: true,
     children: [
       ['node/', 'Node'],
@@ -29,12 +49,72 @@ const nodeBar = function () {
     ],
   }
 }
+const viteBar = () => {
+  return {
+    title: 'Vite',
+    collapsable: true,
+    children: [
+      ['vite/', 'Vite'],
+    ]
+  }
+}
+const eslintBar = () => {
+  return {
+    title: 'Eslint',
+    collapsable: true,
+    children: [
+      ['eslint/', 'Eslint'],
+      ['eslint/auto-commit', '自动提交'],
+    ]
+  }
+}
+const gitBar = () => {
+  return {
+    title: 'Git',
+    collapsable: true,
+    children: [
+      ['git/', 'Git'],
+      ['git/base', '常用命令']
+    ]
+  }
+}
+const markdownBar = () => {
+  return {
+    title: 'Markdown',
+    collapsable: true,
+    children: [
+      ['md/', 'base']
+    ]
+  }
+}
+const issuesBar = () => {
+  return {
+    title: 'Issues',
+    collapsable: true,
+    children: [
+      ['issues/', '问题归类'],
+      ['issues/eslint', 'eslint问题']
+    ]
+  }
+}
+const otherBar = () => {
+  return {
+    title: 'no-base',
+    collapsable: true,
+    children: [
+      ['no-base/', 'No-Base'],
+      ['no-base/envirament/', '环境变量'],
+      ['no-base/mongo/', 'Mongo'],
+      ['no-base/nginx/', 'Nginx'],
+      ['no-base/npm/', 'Npm'],
+    ]
+  }
+}
 
 module.exports = {
-  title: 'issue map',
+  title: 'Blogs-Muxiao',
   description: 'map map map good good',
   themeConfig: {
-    logo: 'default.jpg',
     displayAllHeaders: true,
     activeHeaderLinks: false,
     nav: [
@@ -49,75 +129,19 @@ module.exports = {
       }
     ],
     sidebar: [
-      {
-        title: 'Mine',
-        collapsable: true,
-        // path: '/foo/',
-        sidebarDepth: 1,
-        children: [
-          ['mine/', 'home'],
-          'mine/tree'
-        ]
-      },
-      {
-        title: 'eslint',
-        collapsable: true,
-        children: [
-          ['eslint/', 'Eslint'],
-          ['eslint/auto-commit', '自动提交'],
-        ]
-      },
-      {
-        title: 'git',
-        collapsable: true,
-        children: [
-          ['git/', 'Git'],
-          ['git/base', '常用命令']
-        ]
-      },
-      {
-        title: 'typescript',
-        collapsable: true,
-        children: [
-          ['typescript/', 'ts']
-        ]
-      },
-      {
-        title: 'md',
-        collapsable: true,
-        children: [
-          ['md/', 'base']
-        ]
-      },
-      {
-        title: 'issues',
-        collapsable: true,
-        children: [
-          ['issues/', '问题归类'],
-          ['issues/eslint', 'eslint问题']
-        ]
-      },
-      nodeBar(),
-      {
-        title: 'vite',
-        collapsable: true,
-        children: [
-          ['vite/', 'Vite'],
-        ]
-      },
-      {
-        title: 'no-base',
-        collapsable: true,
-        children: [
-          ['no-base/', 'No-Base'],
-          ['no-base/envirament/', '环境变量'],
-          ['no-base/mongo/', 'Mongo'],
-          ['no-base/nginx/', 'Nginx'],
-          ['no-base/npm/', 'Npm'],
-        ]
-      },
-      cssBar(),
-      htmlBar()
+      ...[
+        mineBar(),
+        cssBar(),
+        htmlBar(),
+        typescriptBar(),
+        nodeBar(),
+        viteBar(),
+        eslintBar(),
+        gitBar(),
+        markdownBar(),
+        issuesBar(),
+        otherBar()
+      ]
     ]
   },
 }
