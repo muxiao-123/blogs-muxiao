@@ -1,7 +1,7 @@
 {
-  "name": "issue-map",
+  "name": "blogs-muxiao",
   "version": "1.0.0",
-  "description": "issue map",
+  "description": "blogs-muxiao",
   "main": "index.js",
   "scripts": {
     "docs:dev": "vuepress dev docs",
