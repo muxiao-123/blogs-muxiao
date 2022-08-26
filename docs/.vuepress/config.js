@@ -29,6 +29,15 @@ const htmlBar = function () {
     ],
   }
 }
+const javascriptBar = function () {
+  return {
+    title: 'Javascript',
+    collapsable: true,
+    children: [
+      ['javascript/', 'Javascript']
+    ],
+  }
+}
 const typescriptBar = () => {
   return {
     title: 'Typescript',
@@ -36,6 +45,24 @@ const typescriptBar = () => {
     children: [
       ['typescript/', 'ts']
     ]
+  }
+}
+const vueBar = function () {
+  return {
+    title: 'Vue',
+    collapsable: true,
+    children: [
+      ['vue/', 'Vue']
+    ],
+  }
+}
+const vue3Bar = function () {
+  return {
+    title: 'Vue3',
+    collapsable: true,
+    children: [
+      ['vue3/', 'Vue3']
+    ],
   }
 }
 const nodeBar = function () {
@@ -75,6 +102,16 @@ const gitBar = () => {
     children: [
       ['git/', 'Git'],
       ['git/base', '常用命令']
+    ]
+  }
+}
+const pluginsBar = () => {
+  return {
+    title: 'Plugins',
+    collapsable: true,
+    children: [
+      ['plugins/', 'Plugins'],
+      'plugins/pm2'
     ]
   }
 }
@@ -133,11 +170,15 @@ module.exports = {
         mineBar(),
         cssBar(),
         htmlBar(),
+        javascriptBar(),
         typescriptBar(),
+        vueBar(),
+        vue3Bar(),
         nodeBar(),
         viteBar(),
         eslintBar(),
         gitBar(),
+        pluginsBar(),
         markdownBar(),
         issuesBar(),
         otherBar()
