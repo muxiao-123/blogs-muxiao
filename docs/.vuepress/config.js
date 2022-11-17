@@ -149,6 +149,7 @@ const otherBar = () => {
 }
 
 module.exports = {
+  base: '/blogs-muxiao/',
   title: 'Blogs-Muxiao',
   description: 'map map map good good',
   themeConfig: {
